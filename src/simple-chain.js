@@ -8,8 +8,9 @@ const chainMaker = {
   getLength() {
     throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
+    return this.hasOwnProperty();
   },
-  addLink(/* value */) {
+  addLink(/*value*/) {
     throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
   },
@@ -22,7 +23,7 @@ const chainMaker = {
     // remove line with error and write your code here
   },
   finishChain() {
-    throw new NotImplementedError('Not implemented');
+    // throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
   }
 };
