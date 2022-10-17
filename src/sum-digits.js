@@ -15,17 +15,24 @@ const { NotImplementedError } = require('../extensions/index.js');
 function getSumOfDigits(n) {
   // throw new NotImplementedError('Not implemented');
   // remove line with error and write your code here
-  function partNum(n){
-    const arr = n.toString().split('');
-    let sum = arr.reduce((elem, nextElem) => +elem + +nextElem);
   
-    if(sum.toString().length > 1){
-      partNum(sum);
+    let str = String(n);
+    let sum = 0;
+    for(let i = 0; i < str.length; i++){
+      sum = +sum + +str[i];
+    }
+    if(String(sum).length > 1){
+      let newSum = 0;
+      let strSum = sum.toString()
+      for(let k = 0; k < strSum.length; k++){
+        newSum = newSum + +strSum[k];
+      }
+      if(String(newSum).length == 1){
+        return newSum;
+      }
     } else {
       return sum;
-    }
-  }
-  partNum(n)
+    }  
 }
 
 module.exports = {
